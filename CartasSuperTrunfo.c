@@ -1,21 +1,48 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    printf("Desafio Super Trunfo - Países\n");
+
+    char pais = "Brasil";
+    char estado;
+    int cidade, pontosTuristicos;
+    float populacao, area, pib, densidade, pibPerCapta;
+
+    //Insere dados
+
+    printf("Digite o estado (A-H): ");
+    scanf("%s", &estado);
+
+    printf("Digite a cidade (1-4): ");
+    scanf("%d", &cidade);
+
+    printf("Digite a população: ");
+    scanf("%f", &populacao);
+
+    printf("Digite a área: ");
+    scanf("%f", &area);
+
+    printf("Digite o pib: ");
+    scanf("%f", &pib);
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d", &pontosTuristicos);
+
+    densidade = populacao / area;
+    pibPerCapta = pib / populacao;
     
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    //Imprime dados
+
+    printf("Código da Carta: %s0%d\n", estado, cidade);
+    printf("Pais: %s\n", pais);
+    printf("Estado: %s\n", estado);
+    printf("Cidade: %d\n", cidade);
+    printf("População: %f\n", populacao);
+    printf("Área: %f\n", area);
+    printf("PIB: %f\n", pib);
+    printf("Pontos Turísticos: %d\n", pontosTuristicos);
+    printf("Densidade Populacional: %f\n", densidade);
+    printf("PIB per Capita: %f\n", pibPerCapta);
 
     return 0;
 }
